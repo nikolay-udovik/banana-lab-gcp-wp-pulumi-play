@@ -1,0 +1,7 @@
+encryptionsalt: v1:NEvksUuZwa8=:v1:vyDCG0WWhViyvLWQ:V+nIpyXx5cK18uLGyTGXtRTn5Nu9QQ==
+config:
+  gcp:project: eminent-ember-272608
+  gcp:region: "us-central1"
+  network:vpcName: "my-custom-vpc"
+  network:cidrRange: "10.0.0.0/24"
+  storage:bucketName: "my-pulumi-bucket"

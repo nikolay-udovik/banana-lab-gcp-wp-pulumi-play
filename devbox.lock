@@ -1,0 +1,197 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "go-task@3.40.1": {
+      "last_modified": "2025-01-14T09:56:28Z",
+      "resolved": "github:NixOS/nixpkgs/357cd3dfdb8993af11268d755d53357720675e66#go-task",
+      "source": "devbox-search",
+      "version": "3.40.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/j7qhiv1i0kamdik0gh9q5r47llvl8z8y-go-task-3.40.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/j7qhiv1i0kamdik0gh9q5r47llvl8z8y-go-task-3.40.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/paf37ssbfhb9hxg1cd5znswzwmx8sdss-go-task-3.40.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/paf37ssbfhb9hxg1cd5znswzwmx8sdss-go-task-3.40.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/yrfn4jmxsw16ngmgxslff18nrf7h1xy5-go-task-3.40.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/yrfn4jmxsw16ngmgxslff18nrf7h1xy5-go-task-3.40.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/66bmnhrlh62vxflw0siz8s7i5pff7i7j-go-task-3.40.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/66bmnhrlh62vxflw0siz8s7i5pff7i7j-go-task-3.40.1"
+        }
+      }
+    },
+    "go@1.23.4": {
+      "last_modified": "2024-12-23T21:10:33Z",
+      "resolved": "github:NixOS/nixpkgs/de1864217bfa9b5845f465e771e0ecb48b30e02d#go",
+      "source": "devbox-search",
+      "version": "1.23.4",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/bva4mymi5b2lhvvbccx8ipws89rar1d8-go-1.23.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/bva4mymi5b2lhvvbccx8ipws89rar1d8-go-1.23.4"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/9lvi0l2yf6bwamsjs5d5n9i57c6kbd2c-go-1.23.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/9lvi0l2yf6bwamsjs5d5n9i57c6kbd2c-go-1.23.4"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/sf1y7x29wvp9lppx5ya9h5b42fcmxb32-go-1.23.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/sf1y7x29wvp9lppx5ya9h5b42fcmxb32-go-1.23.4"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/jfv85qbj4vb1dafcg6kncg4vrbq2bbxv-go-1.23.4",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/jfv85qbj4vb1dafcg6kncg4vrbq2bbxv-go-1.23.4"
+        }
+      }
+    },
+    "pulumi@3.122.0": {
+      "last_modified": "2025-01-07T09:15:50Z",
+      "resolved": "github:NixOS/nixpkgs/8c9fd3e564728e90829ee7dbac6edc972971cd0f#pulumi",
+      "source": "devbox-search",
+      "version": "3.122.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/3ic8a23nj8r25vs6hmlna84lbhcdxp0m-pulumi-3.122.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/3ic8a23nj8r25vs6hmlna84lbhcdxp0m-pulumi-3.122.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6rwbpx9gj7fsxi69y7j456k9jp3pp837-pulumi-3.122.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/6rwbpx9gj7fsxi69y7j456k9jp3pp837-pulumi-3.122.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hai76rf5lymlanifaiqdjssi165lc99q-pulumi-3.122.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hai76rf5lymlanifaiqdjssi165lc99q-pulumi-3.122.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/yq8rvfcdvnb0jd7cl1n89gvmdqylw04d-pulumi-3.122.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/yq8rvfcdvnb0jd7cl1n89gvmdqylw04d-pulumi-3.122.0"
+        }
+      }
+    },
+    "pulumiPackages.pulumi-language-go@3.122.0": {
+      "last_modified": "2024-12-23T21:10:33Z",
+      "resolved": "github:NixOS/nixpkgs/de1864217bfa9b5845f465e771e0ecb48b30e02d#pulumiPackages.pulumi-language-go",
+      "source": "devbox-search",
+      "version": "3.122.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gxnclz7d0yi9dqbil2wphcj5m13qmdfg-pulumi-language-go-3.122.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gxnclz7d0yi9dqbil2wphcj5m13qmdfg-pulumi-language-go-3.122.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/0fzncmb9schlf03d8hyhzxaw4yhssg8f-pulumi-language-go-3.122.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/0fzncmb9schlf03d8hyhzxaw4yhssg8f-pulumi-language-go-3.122.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/lznvddhlbn9x23xi9xdbmw56kbrcy7r8-pulumi-language-go-3.122.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/lznvddhlbn9x23xi9xdbmw56kbrcy7r8-pulumi-language-go-3.122.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/lql6rcm364g1x10mja1ml4q3pr441756-pulumi-language-go-3.122.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/lql6rcm364g1x10mja1ml4q3pr441756-pulumi-language-go-3.122.0"
+        }
+      }
+    }
+  }
+}
