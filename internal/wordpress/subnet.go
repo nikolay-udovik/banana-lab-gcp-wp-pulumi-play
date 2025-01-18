@@ -1,21 +1,17 @@
-package network
+package wordpress
 
 import (
+	"banana-lab-gcp-wp-pulumi-play/models"
+
 	"github.com/pulumi/pulumi-gcp/sdk/v8/go/gcp/compute"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// NewSubnet creates a new Subnet within a VPC based on the provided input and returns its output.
-func NewSubnet(input *SubnetInput) (*SubnetOutput, error) {
-	ctx := input.Ctx
-
-	if input.Name == "" {
-		input.Name = input.VPCName + "-subnet"
-	}
-
-	// Create the Subnet resource
+// NewSubnet creates a new subnet and returns the Subnet model.
+func NewSubnet(ctx *pulumi.Context, input *models.SubnetInput) (*models.Subnet, error) {
+	// Create Subnet
 	subnet, err := compute.NewSubnetwork(ctx, input.Name, &compute.SubnetworkArgs{
-		Network:               pulumi.String(input.VPCName),
+		Network:               input.VPCID,
 		Region:                pulumi.String(input.Region),
 		IpCidrRange:           pulumi.String(input.IpCidrRange),
 		PrivateIpGoogleAccess: pulumi.Bool(input.EnablePrivateIP),
@@ -24,8 +20,9 @@ func NewSubnet(input *SubnetInput) (*SubnetOutput, error) {
 		return nil, err
 	}
 
-	return &SubnetOutput{
-		Name: subnet.Name,
-		Id:   subnet.ID(),
+	// Return Subnet model
+	return &models.Subnet{
+		Input:  *input,
+		Output: models.SubnetOutput{ID: subnet.ID()},
 	}, nil
 }

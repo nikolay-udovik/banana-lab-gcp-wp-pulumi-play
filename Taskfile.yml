@@ -1,73 +1,11 @@
 version: '3'
 
 vars:
-  VERSION: 0.0.3
-  PROJECT_NAME: podinfo-token-validator
-  IMAGE_TAG_BASE: podinfo-token-validator
-  REGISTRY: docker.io
-  DOCKER_USER: drunkymonke
-  IMAGE_NAME: '{{.REGISTRY}}/{{.DOCKER_USER}}/{{.IMAGE_TAG_BASE}}:{{.VERSION}}'
-  CONTAINER_TOOL: docker
-  KIND_CLUSTER_NAME: banana-lab-local
-  GOBIN: '{{if .GOBIN}}{{.GOBIN}}{{else}}{{.GOPATH}}bin{{end}}'
-  MODULE_NAME: monkale.io/{{.PROJECT_NAME}}
-  BINARY_NAME: app
+  PROJECT_NAME: banana-lab-gcp-wp-pulumi-play
 tasks:
-  build:
-    desc: "Compile the application and place the binary in the GOBIN directory."
-    cmds:
-      - mkdir -p ./bin
-      - go build -o {{.GOBIN}}/{{.BINARY_NAME}} -v ./cmd/main.go
-
-  coverage:
-    desc: "Run the coverage test"
-    cmds:
-      - go test -coverprofile=coverage.out ./...
-
-  test:
-    desc: "Run the application in the background and execute tests."
-    status: ["none"]
-    cmds:
-      - task: podinfo-port-fwd
-      - task: coverage
-      - pid=$(go run cmd/main.go & echo $!); echo "App running with PID $pid"
-      - go test -v ./...
-
-  clean:
-    desc: "Remove binary files and clean up."
-    cmds:
-      - go clean
-      - rm -f {{.GOBIN}}/{{.BINARY_NAME}}
-
-  init:
-    desc: "Set up the module and directory structure."
-    cmds:
-      - mkdir -p {{.GOBIN}}
-      - go mod init {{.MODULE_NAME}}
-
   deps:
     desc: "Download and verify module dependencies."
     status: ["none"]
     cmds:
       - go mod tidy
       - go mod verify
-
-  run:
-    desc: "Run the main.go file."
-    status: ["none"]
-    cmds:
-      - task: podinfo-port-fwd
-      - go run cmd/main.go
-
-  docker-build:
-    desc: "Build a Docker image with the application."
-    status: ["none"]
-    cmds:
-      - '{{.CONTAINER_TOOL}} build . -t {{.IMAGE_NAME}}'
-
-  docker-push:
-    desc: "Push the Docker image to a registry."
-    status: ["none"]
-    cmds:
-      - '{{.CONTAINER_TOOL}} push {{.IMAGE_NAME}}'
-      - task: update-kustomize-image
